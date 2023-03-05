@@ -1,0 +1,61 @@
+
+./difference ImageIn.pgm ImageIn2.pgm ImageOut.pgm
+
+** Ayni oldukmlari yerleri beyaz farklilari siyah yapip sinir ciziyoruz**
+
+./dilatation ImageIn.pgm ImageOut.pgm
+
+./eqm ImageIn.pgm ImageIn2.pgm ImageOut.pgm 
+
+** Sqrt varken calistirabilmesi icin ** 
+ gcc norme_gradient.cpp -o gradient -lm
+
+./erosion ImageIn.pgm ImageOut.pgm 
+
+./fermeture ImageIn.pgm ImageOut.pgm
+
+** resimdeki beyazlari siliyor**
+
+./filtre4voisin ImageIn.pgm ImageOut.pgm
+
+./filtre9voisin ImageIn.pgm ImageOut.pgm
+
+./flouC ImageIn.ppm ImageOut.ppm 
+
+./gaus ImageIn.pgm ImageOut.pgm
+
+./gmax ImageIn.pgm ImageOut.pgm Seuil
+
+./histo ImageIn.pgm
+
+./histoC ImageIn.ppm
+
+./hyst ImageIn.pgm ImageOut.pgm SeuilBas SeuilHaut
+
+./inverse  ImageIn.pgm ImageOut.pgm
+
+./moyBlur ImageIn.pgm ImageOut.pgm
+
+./normG ImageIn.pgm ImageOut.pgm
+
+./ouverture ImageIn.pgm ImageOut.pgm
+
+**resimdeki bruit i siliyor **
+
+./profil ImageIn.pgm (col=0 ou ligne=1) numero
+
+./RGBtoY ImageIn.ppm ImageOut.pgm
+
+./RGBtoYCbCr ImageIn.ppm ImageOut.pgm ImageOut.pgm ImageOut.pgm
+
+./s1grey ImageIn.pgm ImageOut.pgm Seuil
+
+./s3grey ImageIn.pgm ImageOut.pgm Seuil1 Seuil2 Seuil3
+
+./seuilC ImageIn.ppm ImageOut.ppm SeuilRouge SeuilG SeuilB
+
+./YCbCr2RBG ImgY.pgm ImgCb.pgm ImgCr.pgm ImgOut.ppm
+
+./YCbCrtoRGREENB ImgY.pgm ImgCb.pgm ImgCr.pgm ImgOut.ppm
+
+

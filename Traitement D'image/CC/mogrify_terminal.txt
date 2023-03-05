@@ -1,0 +1,6 @@
+-> changer format de toutes les images jpg en png
+mogrify -format png *.jpg
+-> changer taille
+mogrify -resize 256x256 *.jpg
+
+
